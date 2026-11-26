@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "deploy": {
+    "command": "./autogen.sh && make && make install",
+    "guide": ".wally/docs/devops/test-env-deploy.md",
+    "verify": "jemalloc-config --version (in the build tree: bin/jemalloc-config --version); compare the printed version against the intended release",
+    "rollback": "",
+    "readiness": "pending",
+    "gaps": [
+      "No target test/deployment environment is defined (no environment id, owner, host, install prefix or access method; INSTALL.md only documents the default /usr/local prefix).",
+      "No credential acquisition method for any target environment is documented.",
+      "No rollback version, trigger or commands are defined in the repository (make clean/distclean/relclean only remove build artifacts, not installed files).",
+      "Deployment acceptance criteria and an effective-version baseline for a target environment are not defined."
+    ]
+  },
+  "it": {
+    "command": "make tests && make check",
+    "guide": ".wally/docs/integration_test/integration_test.md",
+    "success_criteria": "make check exits 0 and test/test.sh prints 'Test suite summary: pass: <p>/<total>, skip: <s>/<total>, fail: <f>/<total>' with fail count = 0. Empty or all-skipped runs are not passes; assertion, environment and execution errors must be distinguished.",
+    "readiness": "ready",
+    "gaps": []
+  }
+}
