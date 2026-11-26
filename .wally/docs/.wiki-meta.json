@@ -1,0 +1,951 @@
+{
+  "generator": "wally-codewiki",
+  "language": "zh-CN",
+  "workspaceMode": "single-repo",
+  "generatedAt": "2026-11-26T13:25:38Z",
+  "commitHash": "6d281cef3cd747666b00c4557c0f42786f66ae89",
+  "branch": "chore/wally-init-20261126-c74",
+  "mode": "full",
+  "pageCount": 37,
+  "skippedHumanPages": [],
+  "driftWarnings": [],
+  "externalPages": [
+    {
+      "path": "apis/_template.md",
+      "reason": "SOP 外部模板页，仅链接，不改写为 codewiki 模板"
+    },
+    {
+      "path": "apis/index.md",
+      "reason": "SOP 外部权威 API 索引，仅链接"
+    },
+    {
+      "path": "devops/env.md",
+      "reason": "SOP 外部开发环境页，仅链接"
+    },
+    {
+      "path": "devops/test-env-deploy.md",
+      "reason": "SOP 外部部署页，仅链接"
+    },
+    {
+      "path": "integration_test/integration_test.md",
+      "reason": "SOP 外部集成测试页，仅链接"
+    },
+    {
+      "path": "sqls/README.md",
+      "reason": "SOP 外部 SQL 文档，仅链接；本仓无数据库"
+    },
+    {
+      "path": "unittest/unittest.md",
+      "reason": "SOP 外部单测规范页，仅链接"
+    }
+  ],
+  "pageOrder": [
+    "INDEX.md",
+    "architecture/allocator-core.md",
+    "architecture/cli-tools.md",
+    "architecture/control-and-observability.md",
+    "architecture/extent-and-os.md",
+    "architecture/index.md",
+    "architecture/module-dep-matrix.md",
+    "architecture/profiler-and-background.md",
+    "architecture/sync-and-utilities.md",
+    "architecture/tcache-and-tsd.md",
+    "business/domain-models/arena.md",
+    "business/domain-models/extent.md",
+    "business/domain-models/index.md",
+    "business/domain-models/tcache.md",
+    "business/index.md",
+    "business/wf-allocate.md",
+    "business/wf-deallocate.md",
+    "business/wf-decay.md",
+    "business/wf-profile.md",
+    "business/wf-realloc.md",
+    "contracts/api-reference.md",
+    "contracts/api/mallctl.md",
+    "contracts/configuration.md",
+    "contracts/error-codes.md",
+    "integrations/downstream/libc-runtime.md",
+    "integrations/downstream/os-memory.md",
+    "integrations/index.md",
+    "integrations/topology-and-mapping.md",
+    "operations/boundary.md",
+    "operations/deployment-and-runtime.md",
+    "operations/dev-and-test.md",
+    "operations/pitfalls-and-adr.md",
+    "operations/runbook-and-observability.md",
+    "overview/business-architecture.md",
+    "overview/callchain-panorama.md",
+    "overview/glossary.md",
+    "overview/system-architecture.md"
+  ],
+  "fileToDocs": {
+    "INSTALL.md": [
+      "operations/deployment-and-runtime.md"
+    ],
+    "Makefile.in": [
+      "operations/deployment-and-runtime.md",
+      "operations/dev-and-test.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "README": [
+      "operations/boundary.md"
+    ],
+    "autogen.sh": [
+      "operations/dev-and-test.md"
+    ],
+    "bin/jemalloc-config.in": [
+      "architecture/cli-tools.md",
+      "contracts/api-reference.md",
+      "operations/deployment-and-runtime.md"
+    ],
+    "bin/jemalloc.sh.in": [
+      "architecture/cli-tools.md",
+      "operations/deployment-and-runtime.md"
+    ],
+    "bin/jeprof.in": [
+      "architecture/cli-tools.md",
+      "operations/boundary.md"
+    ],
+    "configure.ac": [
+      "operations/deployment-and-runtime.md"
+    ],
+    "include/jemalloc/internal/arena_structs_a.h": [
+      "business/domain-models/arena.md",
+      "business/domain-models/index.md"
+    ],
+    "include/jemalloc/internal/arena_structs_b.h": [
+      "business/domain-models/arena.md"
+    ],
+    "include/jemalloc/internal/arena_types.h": [
+      "business/domain-models/arena.md",
+      "overview/glossary.md"
+    ],
+    "include/jemalloc/internal/base_structs.h": [
+      "business/domain-models/index.md"
+    ],
+    "include/jemalloc/internal/cache_bin.h": [
+      "architecture/tcache-and-tsd.md",
+      "business/domain-models/tcache.md"
+    ],
+    "include/jemalloc/internal/extent_structs.h": [
+      "business/domain-models/extent.md",
+      "business/domain-models/index.md",
+      "overview/glossary.md"
+    ],
+    "include/jemalloc/internal/extent_types.h": [
+      "business/domain-models/extent.md"
+    ],
+    "include/jemalloc/internal/jemalloc_internal_types.h": [
+      "overview/glossary.md"
+    ],
+    "include/jemalloc/internal/jemalloc_preamble.h.in": [
+      "contracts/configuration.md"
+    ],
+    "include/jemalloc/internal/sc.h": [
+      "overview/glossary.md"
+    ],
+    "include/jemalloc/internal/tcache_structs.h": [
+      "business/domain-models/index.md",
+      "business/domain-models/tcache.md"
+    ],
+    "include/jemalloc/internal/tcache_types.h": [
+      "business/domain-models/tcache.md"
+    ],
+    "include/jemalloc/jemalloc.sh": [
+      "architecture/cli-tools.md"
+    ],
+    "include/jemalloc/jemalloc_macros.h.in": [
+      "contracts/api-reference.md",
+      "overview/glossary.md"
+    ],
+    "include/jemalloc/jemalloc_protos.h.in": [
+      "contracts/api-reference.md"
+    ],
+    "run_tests.sh": [
+      "operations/dev-and-test.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "scripts/gen_run_tests.py": [
+      "operations/dev-and-test.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "src/arena.c": [
+      "architecture/allocator-core.md",
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "business/domain-models/arena.md",
+      "business/index.md",
+      "business/wf-allocate.md",
+      "business/wf-deallocate.md",
+      "business/wf-decay.md",
+      "contracts/configuration.md",
+      "integrations/topology-and-mapping.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/background_thread.c": [
+      "architecture/profiler-and-background.md",
+      "business/index.md",
+      "business/wf-decay.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md"
+    ],
+    "src/base.c": [
+      "architecture/extent-and-os.md",
+      "architecture/index.md",
+      "overview/system-architecture.md"
+    ],
+    "src/bin.c": [
+      "architecture/allocator-core.md"
+    ],
+    "src/bitmap.c": [
+      "architecture/sync-and-utilities.md"
+    ],
+    "src/ckh.c": [
+      "architecture/sync-and-utilities.md"
+    ],
+    "src/ctl.c": [
+      "architecture/control-and-observability.md",
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "contracts/api/mallctl.md",
+      "integrations/index.md",
+      "operations/runbook-and-observability.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/extent.c": [
+      "architecture/extent-and-os.md",
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "business/domain-models/extent.md",
+      "business/wf-deallocate.md",
+      "business/wf-decay.md",
+      "integrations/topology-and-mapping.md",
+      "operations/pitfalls-and-adr.md",
+      "overview/callchain-panorama.md"
+    ],
+    "src/extent_dss.c": [
+      "architecture/extent-and-os.md",
+      "integrations/downstream/os-memory.md"
+    ],
+    "src/extent_mmap.c": [
+      "architecture/extent-and-os.md",
+      "integrations/downstream/os-memory.md"
+    ],
+    "src/hook.c": [
+      "architecture/profiler-and-background.md"
+    ],
+    "src/jemalloc.c": [
+      "architecture/allocator-core.md",
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "business/index.md",
+      "business/wf-allocate.md",
+      "business/wf-deallocate.md",
+      "business/wf-profile.md",
+      "business/wf-realloc.md",
+      "contracts/api-reference.md",
+      "contracts/api/mallctl.md",
+      "contracts/configuration.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/libc-runtime.md",
+      "integrations/downstream/os-memory.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "operations/boundary.md",
+      "operations/pitfalls-and-adr.md",
+      "overview/business-architecture.md",
+      "overview/callchain-panorama.md",
+      "overview/system-architecture.md"
+    ],
+    "src/large.c": [
+      "architecture/allocator-core.md",
+      "business/wf-allocate.md",
+      "business/wf-realloc.md"
+    ],
+    "src/log.c": [
+      "architecture/control-and-observability.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/malloc_io.c": [
+      "architecture/control-and-observability.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/libc-runtime.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/mutex.c": [
+      "architecture/index.md",
+      "architecture/sync-and-utilities.md",
+      "integrations/downstream/libc-runtime.md",
+      "integrations/index.md",
+      "operations/boundary.md"
+    ],
+    "src/nstime.c": [
+      "architecture/sync-and-utilities.md"
+    ],
+    "src/pages.c": [
+      "architecture/extent-and-os.md",
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "integrations/downstream/os-memory.md",
+      "integrations/index.md",
+      "integrations/topology-and-mapping.md",
+      "operations/boundary.md",
+      "overview/system-architecture.md"
+    ],
+    "src/prof.c": [
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "architecture/profiler-and-background.md",
+      "business/index.md",
+      "business/wf-profile.md",
+      "overview/business-architecture.md"
+    ],
+    "src/rtree.c": [
+      "architecture/tcache-and-tsd.md",
+      "business/wf-realloc.md"
+    ],
+    "src/safety_check.c": [
+      "architecture/sync-and-utilities.md",
+      "contracts/error-codes.md",
+      "integrations/downstream/libc-runtime.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "src/sc.c": [
+      "architecture/allocator-core.md",
+      "overview/system-architecture.md"
+    ],
+    "src/stats.c": [
+      "architecture/control-and-observability.md",
+      "business/wf-profile.md",
+      "operations/runbook-and-observability.md"
+    ],
+    "src/sz.c": [
+      "architecture/allocator-core.md",
+      "business/wf-allocate.md"
+    ],
+    "src/tcache.c": [
+      "architecture/index.md",
+      "architecture/module-dep-matrix.md",
+      "architecture/tcache-and-tsd.md",
+      "business/domain-models/tcache.md",
+      "business/wf-allocate.md",
+      "business/wf-deallocate.md",
+      "contracts/error-codes.md",
+      "overview/callchain-panorama.md"
+    ],
+    "src/test_hooks.c": [
+      "architecture/sync-and-utilities.md"
+    ],
+    "src/tsd.c": [
+      "architecture/tcache-and-tsd.md",
+      "integrations/downstream/libc-runtime.md",
+      "integrations/index.md"
+    ],
+    "src/witness.c": [
+      "architecture/sync-and-utilities.md"
+    ],
+    "src/zone.c": [
+      "architecture/index.md",
+      "operations/pitfalls-and-adr.md"
+    ],
+    "test/integration/malloc.c": [
+      "operations/dev-and-test.md"
+    ],
+    "test/test.sh.in": [
+      "operations/dev-and-test.md"
+    ],
+    "test/unit/mallctl.c": [
+      "operations/dev-and-test.md"
+    ]
+  },
+  "repoDeps": [],
+  "moduleTree": [
+    {
+      "page": "architecture/allocator-core.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/bin.c",
+        "src/large.c",
+        "src/sz.c",
+        "src/sc.c"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "overview/callchain-panorama.md"
+      ],
+      "usedBy": [
+        "architecture/extent-and-os.md",
+        "architecture/tcache-and-tsd.md",
+        "business/wf-allocate.md"
+      ]
+    },
+    {
+      "page": "architecture/cli-tools.md",
+      "sourcePaths": [
+        "bin/jemalloc-config.in",
+        "bin/jemalloc.sh.in",
+        "bin/jeprof.in",
+        "include/jemalloc/jemalloc.sh"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "operations/deployment-and-runtime.md",
+        "contracts/api-reference.md"
+      ]
+    },
+    {
+      "page": "architecture/control-and-observability.md",
+      "sourcePaths": [
+        "src/ctl.c",
+        "src/stats.c",
+        "src/log.c",
+        "src/malloc_io.c"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "contracts/api/mallctl.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md"
+      ]
+    },
+    {
+      "page": "architecture/extent-and-os.md",
+      "sourcePaths": [
+        "src/extent.c",
+        "src/extent_mmap.c",
+        "src/extent_dss.c",
+        "src/pages.c",
+        "src/base.c"
+      ],
+      "dependsOn": [
+        "architecture/allocator-core.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/os-memory.md",
+        "business/domain-models/extent.md"
+      ]
+    },
+    {
+      "page": "architecture/index.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/extent.c",
+        "src/tcache.c",
+        "src/ctl.c",
+        "src/prof.c",
+        "src/base.c",
+        "src/pages.c",
+        "src/mutex.c",
+        "src/zone.c"
+      ],
+      "dependsOn": [
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "architecture/module-dep-matrix.md"
+      ]
+    },
+    {
+      "page": "architecture/module-dep-matrix.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/tcache.c",
+        "src/extent.c",
+        "src/pages.c",
+        "src/ctl.c",
+        "src/prof.c"
+      ],
+      "dependsOn": [
+        "architecture/index.md"
+      ],
+      "usedBy": [
+        "operations/pitfalls-and-adr.md"
+      ]
+    },
+    {
+      "page": "architecture/profiler-and-background.md",
+      "sourcePaths": [
+        "src/prof.c",
+        "src/background_thread.c",
+        "src/hook.c"
+      ],
+      "dependsOn": [
+        "architecture/allocator-core.md"
+      ],
+      "usedBy": [
+        "business/wf-profile.md",
+        "business/wf-decay.md"
+      ]
+    },
+    {
+      "page": "architecture/sync-and-utilities.md",
+      "sourcePaths": [
+        "src/mutex.c",
+        "src/witness.c",
+        "src/bitmap.c",
+        "src/ckh.c",
+        "src/nstime.c",
+        "src/safety_check.c",
+        "src/test_hooks.c"
+      ],
+      "dependsOn": [
+        "architecture/allocator-core.md"
+      ],
+      "usedBy": [
+        "operations/pitfalls-and-adr.md"
+      ]
+    },
+    {
+      "page": "architecture/tcache-and-tsd.md",
+      "sourcePaths": [
+        "src/tcache.c",
+        "src/tsd.c",
+        "src/rtree.c",
+        "include/jemalloc/internal/cache_bin.h"
+      ],
+      "dependsOn": [
+        "architecture/allocator-core.md"
+      ],
+      "usedBy": [
+        "business/domain-models/tcache.md",
+        "business/wf-deallocate.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/arena.md",
+      "sourcePaths": [
+        "include/jemalloc/internal/arena_structs_a.h",
+        "include/jemalloc/internal/arena_structs_b.h",
+        "include/jemalloc/internal/arena_types.h",
+        "src/arena.c"
+      ],
+      "dependsOn": [
+        "business/domain-models/index.md"
+      ],
+      "usedBy": [
+        "business/wf-allocate.md",
+        "business/wf-decay.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/extent.md",
+      "sourcePaths": [
+        "include/jemalloc/internal/extent_structs.h",
+        "include/jemalloc/internal/extent_types.h",
+        "src/extent.c"
+      ],
+      "dependsOn": [
+        "business/domain-models/index.md"
+      ],
+      "usedBy": [
+        "business/wf-realloc.md",
+        "architecture/extent-and-os.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/index.md",
+      "sourcePaths": [
+        "include/jemalloc/internal/arena_structs_a.h",
+        "include/jemalloc/internal/extent_structs.h",
+        "include/jemalloc/internal/tcache_structs.h",
+        "include/jemalloc/internal/base_structs.h"
+      ],
+      "dependsOn": [
+        "business/index.md"
+      ],
+      "usedBy": [
+        "business/domain-models/arena.md",
+        "business/domain-models/extent.md",
+        "business/domain-models/tcache.md"
+      ]
+    },
+    {
+      "page": "business/domain-models/tcache.md",
+      "sourcePaths": [
+        "include/jemalloc/internal/tcache_structs.h",
+        "include/jemalloc/internal/cache_bin.h",
+        "include/jemalloc/internal/tcache_types.h",
+        "src/tcache.c"
+      ],
+      "dependsOn": [
+        "business/domain-models/index.md"
+      ],
+      "usedBy": [
+        "business/wf-deallocate.md",
+        "architecture/tcache-and-tsd.md"
+      ]
+    },
+    {
+      "page": "business/index.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/prof.c",
+        "src/background_thread.c"
+      ],
+      "dependsOn": [
+        "overview/business-architecture.md"
+      ],
+      "usedBy": [
+        "business/domain-models/index.md",
+        "contracts/api-reference.md"
+      ]
+    },
+    {
+      "page": "business/wf-allocate.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/tcache.c",
+        "src/large.c",
+        "src/sz.c"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "business/domain-models/arena.md",
+        "architecture/allocator-core.md"
+      ]
+    },
+    {
+      "page": "business/wf-deallocate.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/tcache.c",
+        "src/arena.c",
+        "src/extent.c"
+      ],
+      "dependsOn": [
+        "business/index.md"
+      ],
+      "usedBy": [
+        "business/domain-models/tcache.md",
+        "architecture/tcache-and-tsd.md"
+      ]
+    },
+    {
+      "page": "business/wf-decay.md",
+      "sourcePaths": [
+        "src/arena.c",
+        "src/background_thread.c",
+        "src/extent.c"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "business/domain-models/arena.md",
+        "architecture/profiler-and-background.md"
+      ]
+    },
+    {
+      "page": "business/wf-profile.md",
+      "sourcePaths": [
+        "src/prof.c",
+        "src/stats.c",
+        "src/jemalloc.c"
+      ],
+      "dependsOn": [
+        "business/index.md"
+      ],
+      "usedBy": [
+        "architecture/control-and-observability.md"
+      ]
+    },
+    {
+      "page": "business/wf-realloc.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/large.c",
+        "src/rtree.c"
+      ],
+      "dependsOn": [
+        "business/index.md",
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "business/domain-models/extent.md"
+      ]
+    },
+    {
+      "page": "contracts/api-reference.md",
+      "sourcePaths": [
+        "include/jemalloc/jemalloc_protos.h.in",
+        "src/jemalloc.c",
+        "include/jemalloc/jemalloc_macros.h.in",
+        "bin/jemalloc-config.in"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "contracts/api/mallctl.md",
+        "contracts/error-codes.md",
+        "architecture/allocator-core.md"
+      ]
+    },
+    {
+      "page": "contracts/api/mallctl.md",
+      "sourcePaths": [
+        "src/ctl.c",
+        "src/jemalloc.c"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md",
+        "contracts/configuration.md"
+      ]
+    },
+    {
+      "page": "contracts/configuration.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "include/jemalloc/internal/jemalloc_preamble.h.in"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "operations/deployment-and-runtime.md",
+        "business/wf-decay.md"
+      ]
+    },
+    {
+      "page": "contracts/error-codes.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/safety_check.c",
+        "src/malloc_io.c",
+        "src/tcache.c"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md"
+      ]
+    },
+    {
+      "page": "integrations/downstream/libc-runtime.md",
+      "sourcePaths": [
+        "src/mutex.c",
+        "src/tsd.c",
+        "src/jemalloc.c",
+        "src/safety_check.c",
+        "src/malloc_io.c"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "integrations/topology-and-mapping.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "integrations/downstream/os-memory.md",
+      "sourcePaths": [
+        "src/pages.c",
+        "src/extent_mmap.c",
+        "src/extent_dss.c",
+        "src/jemalloc.c"
+      ],
+      "dependsOn": [
+        "integrations/index.md",
+        "integrations/topology-and-mapping.md"
+      ],
+      "usedBy": []
+    },
+    {
+      "page": "integrations/index.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/pages.c",
+        "src/mutex.c",
+        "src/tsd.c",
+        "src/ctl.c"
+      ],
+      "dependsOn": [
+        "overview/system-architecture.md"
+      ],
+      "usedBy": [
+        "integrations/topology-and-mapping.md"
+      ]
+    },
+    {
+      "page": "integrations/topology-and-mapping.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/extent.c",
+        "src/pages.c"
+      ],
+      "dependsOn": [
+        "contracts/api-reference.md",
+        "architecture/index.md"
+      ],
+      "usedBy": [
+        "integrations/downstream/os-memory.md",
+        "integrations/downstream/libc-runtime.md"
+      ]
+    },
+    {
+      "page": "operations/boundary.md",
+      "sourcePaths": [
+        "src/pages.c",
+        "src/mutex.c",
+        "src/jemalloc.c",
+        "bin/jeprof.in",
+        "README"
+      ],
+      "dependsOn": [],
+      "usedBy": []
+    },
+    {
+      "page": "operations/deployment-and-runtime.md",
+      "sourcePaths": [
+        "Makefile.in",
+        "bin/jemalloc-config.in",
+        "bin/jemalloc.sh.in",
+        "INSTALL.md",
+        "configure.ac"
+      ],
+      "dependsOn": [
+        "contracts/configuration.md"
+      ],
+      "usedBy": [
+        "operations/runbook-and-observability.md"
+      ]
+    },
+    {
+      "page": "operations/dev-and-test.md",
+      "sourcePaths": [
+        "Makefile.in",
+        "autogen.sh",
+        "test/test.sh.in",
+        "test/unit/mallctl.c",
+        "test/integration/malloc.c",
+        "run_tests.sh",
+        "scripts/gen_run_tests.py"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "operations/pitfalls-and-adr.md",
+      "sourcePaths": [
+        "src/zone.c",
+        "src/safety_check.c",
+        "src/jemalloc.c",
+        "src/extent.c",
+        "scripts/gen_run_tests.py",
+        "run_tests.sh"
+      ],
+      "dependsOn": [
+        "architecture/index.md"
+      ],
+      "usedBy": [
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "operations/runbook-and-observability.md",
+      "sourcePaths": [
+        "src/stats.c",
+        "src/log.c",
+        "src/malloc_io.c",
+        "src/ctl.c",
+        "Makefile.in"
+      ],
+      "dependsOn": [
+        "contracts/error-codes.md"
+      ],
+      "usedBy": [
+        "operations/boundary.md"
+      ]
+    },
+    {
+      "page": "overview/business-architecture.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/prof.c",
+        "src/background_thread.c"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "business/index.md",
+        "business/domain-models/index.md"
+      ]
+    },
+    {
+      "page": "overview/callchain-panorama.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/tcache.c",
+        "src/extent.c",
+        "src/background_thread.c",
+        "src/ctl.c"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "integrations/topology-and-mapping.md",
+        "contracts/error-codes.md"
+      ]
+    },
+    {
+      "page": "overview/glossary.md",
+      "sourcePaths": [
+        "include/jemalloc/internal/jemalloc_internal_types.h",
+        "include/jemalloc/internal/sc.h",
+        "include/jemalloc/internal/extent_structs.h",
+        "include/jemalloc/internal/arena_types.h",
+        "include/jemalloc/jemalloc_macros.h.in"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "business/domain-models/index.md",
+        "architecture/allocator-core.md"
+      ]
+    },
+    {
+      "page": "overview/system-architecture.md",
+      "sourcePaths": [
+        "src/jemalloc.c",
+        "src/arena.c",
+        "src/pages.c",
+        "src/base.c",
+        "src/ctl.c",
+        "src/sc.c"
+      ],
+      "dependsOn": [],
+      "usedBy": [
+        "architecture/index.md",
+        "integrations/index.md"
+      ]
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "unresolvedRefs": 0,
+    "truncatedPages": 0,
+    "duplicatePairs": 0,
+    "gates": {
+      "G1_header_human_and_meta": "PASS",
+      "G2_coverage_and_contracts": "PASS",
+      "G3_closure_and_anchoring": "PASS",
+      "G4_depth_dedup_and_lang": "PASS",
+      "G5_mermaid_safety": "PASS"
+    }
+  }
+}
